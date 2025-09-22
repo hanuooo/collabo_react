@@ -83,10 +83,11 @@ function App(){
                                     onChange={(event)=>setName(event.target.value)}
                                     isInvalid={!!errors.name}
                                 />
+
                                 <Form.Control.Feedback type="invalid">
                                     {errors.name}
                                     </Form.Control.Feedback>
-                            </Form.Group>
+                             </Form.Group>
 
                                <Form.Group className="mb-3">
                                 <Form.Label>이메일</Form.Label>
@@ -98,6 +99,7 @@ function App(){
                                     required // 필수 입력 항목
                                     isInvalid={!!errors.email}
                                 />
+
                                  <Form.Control.Feedback type="invalid">
                                     {errors.email}
                                     </Form.Control.Feedback>
@@ -113,6 +115,7 @@ function App(){
                                     required
                                     isInvalid={!!errors.password}
                                 />
+
                                  <Form.Control.Feedback type="invalid">
                                     {errors.password}
                                     </Form.Control.Feedback>
@@ -128,6 +131,7 @@ function App(){
                                     required
                                     isInvalid={!!errors.address}
                                 />
+
                                  <Form.Control.Feedback type="invalid">
                                     {errors.address}
                                     </Form.Control.Feedback>
