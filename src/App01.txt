@@ -16,8 +16,6 @@ function App() {
   // 클라이언트에서 사용자 정보를 저장하기 위하여 localStorage를 사용하겠습니다.
   const [user, setUser] = useState(null);
 
-  const navigate = useNavigate();
-
   // JSON.parse()는 JSON 형태의 문자열을 자바 스크립트 객체 형태로 변환해 줍니다.
   useEffect(() => {
     const loginUser = localStorage.getItem('user');
@@ -31,10 +29,9 @@ function App() {
     console.log('로그인 성공');
   }
 
-
+  const navigate = useNavigate();
 
   const handleLogout = (event) => {
-    
     event.preventDefault();
 
     setUser(null);
