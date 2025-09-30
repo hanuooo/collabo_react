@@ -199,7 +199,7 @@ function App({ user }) {
             alert(response.data);
 
             // 방금 주문한 품목은 이제 장바구니 목록에서 제거되어야 합니다.
-            selectedProducts((previous)=>
+            setCartProducts((previous)=>
                 previous.filter((product)=> !product.checked) // 주문한 상품 제거하기
             );
 
@@ -209,8 +209,6 @@ function App({ user }) {
             console.log('주문 기능 실패');
             console.log(error);
         };
-
-        alert('주문 성공');
     };
 
     return (
