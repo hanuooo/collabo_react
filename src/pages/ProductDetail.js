@@ -83,12 +83,12 @@ function App({ user }) {
             // Cart에 담을 내용은 `회원 아이디`, `상품 아이디`, `수량`입니다.
             // BackEnd 영역에서 CartProductDto 라는 클래스와 매치됩니다.
             const parameters = {
-                memberId: user.id,
-                productId: product.id,
-                quantity: quantity
+                memberId:user.id,
+                productId:product.id,
+                quantity:quantity
             };
 
-            const response = await axios.post(url, parameters);
+            const response = await axios.post(url,parameters);
 
             alert(response.data);
             navigate('/product/list'); // 상품 목록 페이지로 이동
